@@ -1,3 +1,4 @@
+package action;
 import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
@@ -10,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import modele.Pensee;
 import outils.Journal;
+import vue.VueInspirationVisuelle;
 
 public class ControleurInspirationVisuelle  implements Initializable {
 	protected PenseeDAO penseeDAO = new PenseeDAO();
