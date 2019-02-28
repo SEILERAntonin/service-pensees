@@ -1,3 +1,7 @@
+// Auteur : Antonin Seiler INFO 2
+// Date : 21/02/2019
+// Sujet : Maintenance
+
 <?php
 	include_once "basededonnees.php";
 	class PenseeDAO
