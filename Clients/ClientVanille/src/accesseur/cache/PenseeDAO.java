@@ -1,3 +1,7 @@
+// Auteur : Antonin Seiler INFO 2
+// Date : 21/02/2019
+// Sujet : Maintenance
+
 package accesseur.cache;
 
 import java.sql.Connection;
