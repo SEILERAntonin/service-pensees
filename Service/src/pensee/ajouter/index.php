@@ -1,3 +1,7 @@
+// Auteur : Antonin Seiler INFO 2
+// Date : 21/02/2019
+// Sujet : Maintenance
+
 <?php 
 	print_r($_POST);
 	
@@ -12,10 +16,10 @@
 	$pensee->auteur = $penseeTableau['auteur'];
 	$pensee->message = $penseeTableau['message'];
 	$pensee->annee = $penseeTableau['annee'];
+	$pensee->source = $penseeTableau['source'];
 	
 	$succes = $penseeDAO->ajouterPensee($pensee);
 ?><?php 
-
 //header("Content-type: text/xml");
 //echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
