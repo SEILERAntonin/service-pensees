@@ -1,7 +1,7 @@
 import accesseur.cache.PenseeDAO;
 import modele.Pensee;
 import outils.Journal;
-import vue.VueInspirationVisuelle;
+import vue.VueInspiration;
 
 public class App {
 
@@ -14,7 +14,7 @@ public class App {
 		//Pensee pensee = new Pensee("Rossetti","Ce qui est plus triste qu une oeuvre inachevee, c est une oeuvre jamais commencee.");
 		//penseeDAO.ajouterPensee(pensee);		
 		
-		VueInspirationVisuelle.launch(VueInspirationVisuelle.class, parametres);
+		VueInspiration.launch(VueInspiration.class, parametres);
 		
 		PenseeDAO cachePenseeDAO = new PenseeDAO();
 		//cachePenseeDAO.listerPensees();

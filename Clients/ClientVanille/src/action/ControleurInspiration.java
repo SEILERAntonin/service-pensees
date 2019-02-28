@@ -11,23 +11,23 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import modele.Pensee;
 import outils.Journal;
-import vue.VueInspirationVisuelle;
+import vue.VueInspiration;
 
-public class ControleurInspirationVisuelle  implements Initializable {
+public class ControleurInspiration  implements Initializable {
 	protected PenseeDAO penseeDAO = new PenseeDAO();
 
-	public ControleurInspirationVisuelle()
+	public ControleurInspiration()
 	{
-		ControleurInspirationVisuelle.instance = this;
+		ControleurInspiration.instance = this;
 	}
-	protected static ControleurInspirationVisuelle instance = null;
-	public static ControleurInspirationVisuelle getInstance() {return ControleurInspirationVisuelle.instance;}	
+	protected static ControleurInspiration instance = null;
+	public static ControleurInspiration getInstance() {return ControleurInspiration.instance;}	
 	
 	@FXML protected void trouverInspiration(ActionEvent evenement) {
     	
     	System.out.println("trouverInspiration( )");
 		Pensee pensee = penseeDAO.chargerPenseeAleatoire();
-		VueInspirationVisuelle.getInstance().afficherPensee(pensee);
+		VueInspiration.getInstance().afficherPensee(pensee);
     	
     	// Singleton obligatoire car le framework de JavaFX cache l'instance
     	//VueInspirationVisuelle.getInstance().ecrireUnMessage("allo");
@@ -44,7 +44,7 @@ public class ControleurInspirationVisuelle  implements Initializable {
 		//	Journal.ecrire(5, pensee.getMessage() + "(" + pensee.getAuteur() + ")");
 		//}
 		//VueInspirationVisuelle.getInstance().afficherListePensees(listePensees);
-		VueInspirationVisuelle.getInstance().afficherPensee(pensee);
+		VueInspiration.getInstance().afficherPensee(pensee);
 	}
 	
 	@Override

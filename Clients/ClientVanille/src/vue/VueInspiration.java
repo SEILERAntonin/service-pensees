@@ -2,7 +2,7 @@ package vue;
 import java.util.Iterator;
 import java.util.List;
 
-import action.ControleurInspirationVisuelle;
+import action.ControleurInspiration;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,24 +12,24 @@ import javafx.stage.Stage;
 import modele.Pensee;
 import outils.Journal;
 
-public class VueInspirationVisuelle extends Application {
-	public VueInspirationVisuelle()
+public class VueInspiration extends Application {
+	public VueInspiration()
 	{
 		System.out.println("new VueInspiration()");
-		VueInspirationVisuelle.instance = this;	
+		VueInspiration.instance = this;	
 	}
-	protected static VueInspirationVisuelle instance = null;
-	public static VueInspirationVisuelle getInstance() {return VueInspirationVisuelle.instance;};
+	protected static VueInspiration instance = null;
+	public static VueInspiration getInstance() {return VueInspiration.instance;};
 	
 	protected Scene scene = null;
 	@Override
 	public void start(Stage stade) throws Exception {
-		Parent racine = FXMLLoader.load(getClass().getResource("inspiration-visuelle.fxml"));
+		Parent racine = FXMLLoader.load(getClass().getResource("inspiration.fxml"));
 		//Pane racine = new StackPane();
 		scene = new Scene(racine, 800, 600);
 		stade.setScene(scene);
 		stade.show();
-		ControleurInspirationVisuelle.getInstance().initialiser();
+		ControleurInspiration.getInstance().initialiser();
 		
 		// stade.setOnShowing(new EventHandler<WindowEvent>() {public void handle(WindowEvent event) {  } });
 	}	
