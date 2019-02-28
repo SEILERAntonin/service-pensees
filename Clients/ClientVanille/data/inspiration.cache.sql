@@ -8,7 +8,8 @@ DROP TABLE pensee;
 CREATE TABLE pensee (
     id      INTEGER      PRIMARY KEY AUTOINCREMENT,
     auteur  STRING (255),
-    message TEXT
+    message TEXT,
+    source  TEXT
 );
 
 INSERT INTO pensee (
